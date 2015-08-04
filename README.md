@@ -34,7 +34,7 @@ var pkg = require('../package');
 
 update({
   pgk: pkg,
-  callback: function(data, error) {
+  callback: function(error, data) {
   }
 });
 ```

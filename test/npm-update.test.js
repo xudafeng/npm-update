@@ -12,8 +12,3 @@
  * ================================================================ */
 
 'use strict';
-
-var npm-update = require('../');
-
-describe('test', function(){
-});
