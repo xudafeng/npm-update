@@ -23,7 +23,7 @@ npm-update
 ## Installment
 
 ```bash
-$ npm i npm-update -g --save
+$ npm i npm-update --save
 ```
 
 ## Usage
