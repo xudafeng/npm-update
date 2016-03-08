@@ -1,6 +1,6 @@
 {
   "name": "npm-update",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "npm-update",
   "keywords": ["npm-update"],
   "bin": {
@@ -12,7 +12,8 @@
     "url": "git://github.com/xudafeng/npm-update.git"
   },
   "dependencies": {
-    "co-request": "~0.2.0"
+    "co-request": "~0.2.0",
+    "xlogger": "~1.0.0"
   },
   "devDependencies": {
     "mocha": "*",
