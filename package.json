@@ -1,8 +1,10 @@
 {
   "name": "npm-update",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "npm-update",
-  "keywords": ["npm-update"],
+  "keywords": [
+    "npm-update"
+  ],
   "bin": {
     "npm-update": "./bin/npm-update"
   },
@@ -16,11 +18,12 @@
     "xlogger": "~1.0.0"
   },
   "devDependencies": {
-    "mocha": "*",
-    "should": "*",
-    "jshint": "*",
+    "co": "^4.6.0",
     "istanbul": "*",
-    "pre-commit": "1.1.1"
+    "jshint": "*",
+    "mocha": "*",
+    "pre-commit": "1.1.1",
+    "should": "*"
   },
   "scripts": {
     "test": "make test",
