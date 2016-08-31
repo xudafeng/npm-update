@@ -1,5 +1,4 @@
-npm-update
-====
+# npm-update
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
@@ -18,17 +17,17 @@ npm-update
 [download-image]: https://img.shields.io/npm/dm/npm-update.svg?style=flat-square
 [download-url]: https://npmjs.org/package/npm-update
 
-> npm-update
+> npm update
 
 ## Installment
 
-```bash
+```shell
 $ npm i npm-update --save
 ```
 
 ## Usage
 
-```js
+```javascript
 var update = require('npm-update');
 var pkg = require('../package');
 
