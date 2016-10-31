@@ -12,8 +12,4 @@ test: install
 		--require co-mocha
 jshint:
 	@${npm_bin}/jshint .
-pull:
-	@git pull origin ${git_version}
-push:
-	@git push origin ${git_version}
 .PHONY: test

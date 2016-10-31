@@ -1,12 +1,11 @@
 {
   "name": "npm-update",
-  "version": "1.0.4",
-  "description": "npm-update",
+  "version": "1.0.5",
+  "description": "npm update",
   "keywords": [
-    "npm-update"
+    "npm",
+    "update"
   ],
-  "bin": {
-    "npm-update": "./bin/npm-update"
   },
   "main": "index.js",
   "repository": {
