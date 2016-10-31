@@ -5,8 +5,7 @@
   "keywords": [
     "npm",
     "update"
-  ]
-  },
+  ],
   "main": "index.js",
   "repository": {
     "type": "git",
