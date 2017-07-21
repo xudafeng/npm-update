@@ -21,13 +21,13 @@
 
 ## Installment
 
-```shell
+``` bash
 $ npm i npm-update --save
 ```
 
 ## Usage
 
-```javascript
+``` javascript
 var update = require('npm-update');
 var pkg = require('../package');
 

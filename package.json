@@ -1,6 +1,6 @@
 {
   "name": "npm-update",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "npm update",
   "keywords": [
     "npm",
@@ -21,7 +21,7 @@
     "istanbul": "*",
     "jshint": "*",
     "mocha": "*",
-    "pre-commit": "1.1.1",
+    "pre-commit": "*",
     "should": "*"
   },
   "scripts": {
@@ -32,8 +32,5 @@
     "jshint"
   ],
   "homepage": "https://github.com/xudafeng/npm-update",
-  "author": "xudafeng",
-  "email": "xudafeng@126.com",
-  "blog": "http://xdf.me",
   "license": "MIT"
 }

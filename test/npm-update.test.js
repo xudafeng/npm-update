@@ -21,7 +21,7 @@ var pkg = {
 };
 
 describe('#npm-update', function() {
-  this.timeout(50000);
+  this.timeout(50 * 1000);
 
   it('only pkg', function(done) {
     co(update, {
