@@ -21,13 +21,13 @@
 
 ## Installment
 
-``` bash
+```bash
 $ npm i npm-update --save
 ```
 
 ## Usage
 
-``` javascript
+```javascript
 var update = require('npm-update');
 var pkg = require('../package');
 
@@ -41,5 +41,3 @@ update({
 ## License
 
 The MIT License (MIT)
-
-Copyright (c) 2015 xdf
