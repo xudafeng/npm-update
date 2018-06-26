@@ -11,7 +11,7 @@
 [travis-image]: https://img.shields.io/travis/macacajs/npm-update.svg?style=flat-square
 [travis-url]: https://travis-ci.org/macacajs/npm-update
 [coveralls-image]: https://img.shields.io/coveralls/macacajs/npm-update.svg?style=flat-square
-coveralls-url]: https://coveralls.io/r/macacajs/npm-update?branch=master
+[coveralls-url]: https://coveralls.io/r/macacajs/npm-update?branch=master
 [node-image]: https://img.shields.io/badge/node.js-%3E=_0.10-green.svg?style=flat-square
 [node-url]: http://nodejs.org/download/
 [download-image]: https://img.shields.io/npm/dm/npm-update.svg?style=flat-square
@@ -37,6 +37,18 @@ update({
   }
 });
 ```
+
+<!-- GITCONTRIBUTOR_START -->
+
+## Contributors
+
+|[<img src="https://avatars1.githubusercontent.com/u/1011681?v=4" width="100px;"/><br/><sub><b>xudafeng</b></sub>](https://github.com/xudafeng)<br/>|[<img src="https://avatars3.githubusercontent.com/u/5086369?v=4" width="100px;"/><br/><sub><b>brunoyang</b></sub>](https://github.com/brunoyang)<br/>
+| :---: | :---: |
+
+
+This project follows the git-contributor [spec](https://github.com/xudafeng/git-contributor), auto upated at `Tue Jun 26 2018 20:01:55 GMT+0800`.
+
+<!-- GITCONTRIBUTOR_END -->
 
 ## License
 
