@@ -1,7 +1,8 @@
 'use strict';
 
-var update = require('../lib/npm-update');
 var co = require('co');
+
+var update = require('../lib/npm-update');
 
 var pkg = {
   name: 'npm-update'
