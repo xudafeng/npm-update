@@ -8,7 +8,11 @@ const update = require('../lib/npm-update');
 describe('#npm-update', function () {
   it('package is latest', function * () {
     const res = yield update({
-      pkg,
+      pkg: {
+        name: 'macaca-datahub',
+        version: '0.1.0',
+      },
+      version: '0.1',
     });
     assert.deepStrictEqual(res, {
       needUpdate: false,
