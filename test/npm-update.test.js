@@ -1,55 +1,98 @@
 'use strict';
 
-var co = require('co');
+const assert = require('assert');
 
-var update = require('../lib/npm-update');
+const pkg = require('../package.json');
+const update = require('../lib/npm-update');
 
-var pkg = {
-  name: 'npm-update'
-};
-
-describe('#npm-update', function() {
-  this.timeout(50 * 1000);
-
-  it('only pkg', function(done) {
-    co(update, {
-      pkg: pkg,
-      callback: function(err, data) {
-        data.name.should.be.eql(pkg.name);
-        done();
-      }
+describe('#npm-update', function () {
+  it('package is latest', function * () {
+    const res = yield update({
+      pkg,
+    });
+    assert.deepStrictEqual(res, {
+      needUpdate: false,
     });
   });
 
-  it('only name', function(done) {
-    co(update, {
-      name: pkg.name,
-      callback: function(err, data) {
-        data.name.should.be.eql(pkg.name);
-        done();
-      }
+  it('package is outdated', function * () {
+    const res = yield update({
+      pkg: {
+        ...pkg,
+        version: '0.0.1',
+      },
+    });
+    assert.deepStrictEqual(res, {
+      needUpdate: true,
+      version: pkg.version,
     });
   });
 
-  it('pkg.name and name are same', function(done) {
-    co(update, {
-      pkg: pkg,
-      name: pkg.name,
-      callback: function(err, data) {
-        data.name.should.be.eql(pkg.name);
-        done();
-      }
+  it('set compared version', function * () {
+    const res = yield update({
+      pkg: {
+        name: 'macaca-datahub',
+        version: '2.0.0',
+      },
+      version: '2',
     });
+    assert(res.needUpdate === true);
+    assert(res.version);
   });
 
-  it('pkg.name and name are different', function(done) {
-    co(update, {
-      pkg: 'express',
-      name: 'koa',
-      callback: function(err, data) {
-        data.name.should.be.eql('koa');
-        done();
-      }
+  it('set compared tag', function * () {
+    const res = yield update({
+      pkg: {
+        name: 'macaca-datahub',
+        version: '2.0.0',
+      },
+      version: 'next',
     });
+    assert(res.needUpdate === true);
+    assert(res.version);
+  });
+
+  it('compared version not found', function * () {
+    const res = yield update({
+      pkg: {
+        name: 'webpack-seed-project',
+        version: '1.0.0',
+      },
+      version: '0.1',
+    });
+    assert(res.needUpdate === false);
+  });
+
+  it('thorws if package.json not set', function * () {
+    try {
+      yield update();
+      assert.fail();
+    } catch (e) {
+      assert(e.message === 'can\'t get package.json name');
+    }
+  });
+
+  it('thorws if name of version is not found', function * () {
+    try {
+      yield update({
+        pkg: {
+          version: '2.0.0',
+        },
+      });
+      assert.fail();
+    } catch (e) {
+      assert(e.message === 'can\'t get package.json name');
+    }
+
+    try {
+      yield update({
+        pkg: {
+          name: 'macaca-datahub',
+        },
+      });
+      assert.fail();
+    } catch (e) {
+      assert(e.message === 'can\'t get package.json version');
+    }
   });
 });

@@ -28,14 +28,26 @@ $ npm i npm-update --save
 ## Usage
 
 ```javascript
-var update = require('npm-update');
-var pkg = require('../package');
+const update = require('npm-update')
+const pkg = require('../package.json')
 
-update({
-  pgk: pkg,
-  callback: function(error, data) {
-  }
-});
+(async () => {
+  const { needUpdate } = await update({ pkg })
+  if (needUpdate) return
+  // do some stuff
+})()
+```
+
+If `needUpdate` is `true`, outlog this message:
+
+```
+╭─────────────────────────────────────────╮
+│                                         │
+│   new version x.y.z found               │
+│                                         │
+│   run npm i name@x -g                   │
+│                                         │
+╰─────────────────────────────────────────╯
 ```
 
 <!-- GITCONTRIBUTOR_START -->
