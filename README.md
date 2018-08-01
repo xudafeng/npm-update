@@ -38,7 +38,7 @@ const pkg = require('../package.json')
 })()
 ```
 
-If `needUpdate` is `true`, outlog this message:
+If `needUpdate` is `true`, print message:
 
 ```
 ╭─────────────────────────────────────────╮
@@ -49,6 +49,22 @@ If `needUpdate` is `true`, outlog this message:
 │                                         │
 ╰─────────────────────────────────────────╯
 ```
+
+## Options
+
+```javascript
+const {
+  needUpdate,               // return true | false
+  version: latestVersion,   // return version if needUpdate
+} = await update(options)
+```
+
+- options {object}
+  - **pkg** {object} package.json object.
+  - **host** {String} registry host, default is **registry.npmjs.org**.
+  - **timeout** {Number} request registry timeout, default is **3000ms**.
+  - **version** {String} base version for comparing, can be npm tag or npm version, default is **latest**.
+  - **silent** {Boolean} if slient is true, will not print message, default is false.
 
 <!-- GITCONTRIBUTOR_START -->
 
