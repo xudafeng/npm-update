@@ -39,6 +39,7 @@ describe('#npm-update', function () {
         version: '2.0.0',
       },
       version: '2',
+      host: 'registry.cnpmjs.org',
     });
     assert(res.needUpdate === true);
     assert(res.version);
@@ -51,6 +52,7 @@ describe('#npm-update', function () {
         version: '2.0.0',
       },
       version: 'next',
+      host: 'registry.cnpmjs.org',
     });
     assert(res.needUpdate === true);
     assert(res.version);
