@@ -13,6 +13,7 @@ describe('#npm-update', function () {
         version: '0.1.0',
       },
       version: '0.1',
+      host: 'registry.cnpmjs.org',
     });
     assert.deepStrictEqual(res, {
       needUpdate: false,
@@ -25,6 +26,7 @@ describe('#npm-update', function () {
         ...pkg,
         version: '0.0.1',
       },
+      host: 'registry.cnpmjs.org',
     });
     assert.deepStrictEqual(res, {
       needUpdate: true,
@@ -65,6 +67,7 @@ describe('#npm-update', function () {
         version: '1.0.0',
       },
       version: '0.1',
+      host: 'registry.cnpmjs.org',
     });
     assert(res.needUpdate === false);
   });
@@ -84,6 +87,7 @@ describe('#npm-update', function () {
         pkg: {
           version: '2.0.0',
         },
+        host: 'registry.cnpmjs.org',
       });
       assert.fail();
     } catch (e) {
@@ -95,10 +99,25 @@ describe('#npm-update', function () {
         pkg: {
           name: 'macaca-datahub',
         },
+        host: 'registry.cnpmjs.org',
       });
       assert.fail();
     } catch (e) {
       assert(e.message === 'can\'t get package.json version');
     }
+  });
+
+  it('silent mode', function * () {
+    const res = yield update({
+      pkg: {
+        name: 'macaca-datahub',
+        version: '2.0.0',
+      },
+      version: 'next',
+      host: 'registry.cnpmjs.org',
+      silent: true,
+    });
+    assert(res.needUpdate === true);
+    assert(res.version);
   });
 });
