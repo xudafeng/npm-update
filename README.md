@@ -61,12 +61,12 @@ const {
 } = await update(options)
 ```
 
-- options {object}
-  - **pkg** {object} package.json object.
-  - **host** {String} registry host, default is **registry.npmjs.org**.
-  - **timeout** {Number} request registry timeout, default is **3000ms**.
-  - **version** {String} base version for comparing, can be npm tag or npm version, default is **latest**.
-  - **silent** {Boolean} if slient is true, will not print message, default is false.
+- options {Object}
+  - **pkg** `Object` package.json object.
+  - **host** `string` registry host, default is **registry.npmjs.org**.
+  - **timeout** `number` request registry timeout, default is **3000ms**.
+  - **version** `string` base version for comparing, can be npm tag or npm version, default is **latest**.
+  - **silent** `boolean` if slient is true, will not print message, default is **false**.
 
 <!-- GITCONTRIBUTOR_START -->
 
