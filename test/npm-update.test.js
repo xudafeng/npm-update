@@ -12,6 +12,7 @@ describe('#npm-update', function () {
         name: 'macaca-datahub',
         version: '0.1.0',
       },
+      timeout: 10000,
       version: '0.1',
       host: 'registry.cnpmjs.org',
     });
@@ -26,6 +27,7 @@ describe('#npm-update', function () {
         ...pkg,
         version: '0.0.1',
       },
+      timeout: 10000,
       host: 'registry.cnpmjs.org',
     });
     assert.deepStrictEqual(res, {
@@ -40,6 +42,7 @@ describe('#npm-update', function () {
         name: 'macaca-datahub',
         version: '2.0.0',
       },
+      timeout: 10000,
       version: '2',
       host: 'registry.cnpmjs.org',
     });
@@ -53,6 +56,7 @@ describe('#npm-update', function () {
         name: 'macaca-datahub',
         version: '2.0.0',
       },
+      timeout: 10000,
       version: 'latest',
       host: 'registry.cnpmjs.org',
     });
@@ -66,6 +70,7 @@ describe('#npm-update', function () {
         name: 'webpack-seed-project',
         version: '1.0.0',
       },
+      timeout: 10000,
       version: '0.1',
       host: 'registry.cnpmjs.org',
     });
@@ -116,6 +121,7 @@ describe('#npm-update', function () {
       version: 'latest',
       host: 'registry.cnpmjs.org',
       silent: true,
+      timeout: 10000,
     });
     assert(res.needUpdate === true);
     assert(res.version);
