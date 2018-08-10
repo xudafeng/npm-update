@@ -53,7 +53,7 @@ describe('#npm-update', function () {
         name: 'macaca-datahub',
         version: '2.0.0',
       },
-      version: 'next',
+      version: 'latest',
       host: 'registry.cnpmjs.org',
     });
     assert(res.needUpdate === true);
@@ -113,7 +113,7 @@ describe('#npm-update', function () {
         name: 'macaca-datahub',
         version: '2.0.0',
       },
-      version: 'next',
+      version: 'latest',
       host: 'registry.cnpmjs.org',
       silent: true,
     });
