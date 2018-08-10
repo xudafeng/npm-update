@@ -2,7 +2,7 @@
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
-[![Test coverage][coveralls-image]][coveralls-url]
+[![Test coverage][codecov-image]][codecov-url]
 [![node version][node-image]][node-url]
 [![npm download][download-image]][download-url]
 
@@ -12,6 +12,8 @@
 [travis-url]: https://travis-ci.org/macacajs/npm-update
 [coveralls-image]: https://img.shields.io/coveralls/macacajs/npm-update.svg?style=flat-square
 [coveralls-url]: https://coveralls.io/r/macacajs/npm-update?branch=master
+[codecov-image]: https://img.shields.io/codecov/c/github/macacajs/npm-update.svg?style=flat-square
+[codecov-url]: https://codecov.io/gh/macacajs/npm-update/branch/master
 [node-image]: https://img.shields.io/badge/node.js-%3E=_8-green.svg?style=flat-square
 [node-url]: http://nodejs.org/download/
 [download-image]: https://img.shields.io/npm/dm/npm-update.svg?style=flat-square
