@@ -1,13 +1,5 @@
-.DS_Store
 node_modules
-npm-debug.log
-.idea/*
-Thumbs.db
-coverage/
+coverage
 .nyc_output
-.project
-build/
-logs
 *.sw*
 *.un~
-package-lock.json
