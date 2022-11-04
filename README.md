@@ -1,5 +1,7 @@
 # npm-update
 
+---
+
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
 [![Test coverage][codecov-image]][codecov-url]
@@ -30,14 +32,14 @@ $ npm i npm-update --save
 ## Usage
 
 ```javascript
-const update = require('npm-update')
+const npmUpdate = require('npm-update')
 const pkg = require('../package.json')
 
 (async () => {
-  const { needUpdate } = await update({ pkg })
-  if (needUpdate) return
+  const { needUpdate } = await npmUpdate({ pkg });
+  if (needUpdate) return;
   // do some stuff
-})()
+})();
 ```
 
 If `needUpdate` is `true`, print message:
@@ -58,7 +60,7 @@ If `needUpdate` is `true`, print message:
 const {
   needUpdate,               // return true | false
   version: latestVersion,   // return version if needUpdate
-} = await update(options)
+} = await update(options);
 ```
 
 - options {Object}
@@ -76,7 +78,7 @@ const {
 | :---: | :---: | :---: |
 
 
-This project follows the git-contributor [spec](https://github.com/xudafeng/git-contributor), auto updated at `Sun Jul 18 2021 11:29:13 GMT+0800`.
+This project follows the git-contributor [spec](https://github.com/xudafeng/git-contributor), auto updated at `Fri Nov 04 2022 13:38:18 GMT+0800`.
 
 <!-- GITCONTRIBUTOR_END -->
 
