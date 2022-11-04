@@ -38,6 +38,5 @@
   "pre-commit": [
     "lint"
   ],
-  "homepage": "https://github.com/xudafeng/npm-update",
   "license": "MIT"
 }
